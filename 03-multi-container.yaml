@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: multi-container
+  labels:
+      purpose: multi-container
+spec:
+   containers:  
+   - name: nginx 
+     image: nginx
+   - name: almalinux
+     image: almalinux:9
+     command: ["sleep", "1000"]
+
+
+# Root
+# ├── apiVersion (field)
+# ├── kind (field)
+# ├── metadata (object)
+# │   └── name (field)
+# └── spec (object)
+#     └── containers (field)
+#         │
+#         └── List
+#             └── Container 1 (object)
+#                 ├── name (field)
+#                 └── image (field)
+
+# Object → A group of related fields.
+# Field → A key with a value.
+# List → A collection of one or more items (each item starts with -).
+
+# spec → Object
+# containers → Field (its value is a list)
+# - name: nginx ... → Container 1 (object) (first item in the list)
+# name → Field
+# image → Field
