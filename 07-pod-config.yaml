@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: config-map-demo
+spec:
+   containers:
+   - name: nginx
+     image: nginx
+     envFrom:
+     - configMapRef:
+            name: pod-config
+
+#refers pod-config for environment variables while creating this pod 
+# used for non confidentialy information
+#kubectl apply -f 07-pod-config.yaml
+#kubectl exec -it config-map-demo --bash
+#check env
+
+
