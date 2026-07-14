@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 
 metadata:
-    name: nginx-np
+    name: nginx-lb
     labels:
       project: roboshop
       component: frontend
