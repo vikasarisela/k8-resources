@@ -13,3 +13,5 @@ data:
 # kubectl describe configmap pod-config
 
 # how to refer in pod ?
+
+
