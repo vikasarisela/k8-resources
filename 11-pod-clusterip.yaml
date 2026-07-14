@@ -4,8 +4,8 @@ kind: Pod
 metadata:
     name: nginx 
     labels:
-      name: nginx
       project: roboshop
+      component: frontend
       environment: dev
 
 spec:
