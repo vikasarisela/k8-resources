@@ -5,7 +5,7 @@ metadata:
   name: nginx-np
   
 spec:
-  type: nodePort
+  type: NodePort
   selector:
     project: roboshop
     component: frontend
